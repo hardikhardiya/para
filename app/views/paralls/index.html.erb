@@ -8,22 +8,26 @@
 <script type="text/javascript" src="scripts/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="scripts/jquery.scrollTo-1.4.2-min.js"></script>
 <script type="text/javascript" src="browse.js"></script>
-<script type="text/javascript">
-$(document).ready(function(){
-	$('#nav').localScroll(800);
-	
-	//.parallax(xPosition, speedFactor, outerHeight) options:
-	//xPosition - Horizontal position of the element
-	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	$('#intro').parallax("50%", 0.1);
-	$('#second').parallax("50%", 0.1);
-	$('.bg').parallax("50%", 0.4);
-	$('#third').parallax("50%", 0.3);
 
-})
-</script>
 </head>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      </div>
+      <div class="modal-body">
+        <h1><center>Welcome</center></h1>
+      </div>
+      <div class="modal-footer">
+        <center>Its a Hardik Hardiya Production!</center>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <body>
 	<ul id="nav">
@@ -70,4 +74,21 @@ $(document).ready(function(){
 	    </div> <!--.story-->
 	</div> <!--#fifth-->
 </body>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav').localScroll(800);
+	
+	//.parallax(xPosition, speedFactor, outerHeight) options:
+	//xPosition - Horizontal position of the element
+	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+	$('#intro').parallax("50%", 0.1);
+	$('#second').parallax("50%", 0.1);
+	$('.bg').parallax("50%", 0.4);
+	$('#third').parallax("50%", 0.3);
+     $(window).load(function(){
+        $('#myModal').modal('show');
+    });
+})
+</script>
 </html>
